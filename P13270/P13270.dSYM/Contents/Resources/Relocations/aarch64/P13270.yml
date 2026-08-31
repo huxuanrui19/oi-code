@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/P13270/P13270'
+relocations:
+  - { offset: 0x5469, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x1733C, symBinAddr: 0x100008024, symSize: 0x0 }
+  - { offset: 0x54C7, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0x17338, symBinAddr: 0x100008020, symSize: 0x0 }
+  - { offset: 0x54E1, size: 0x8, addend: 0x0, symName: __Z1sB5cxx11, symObjAddr: 0x17318, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x5629, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P13270.cpp, symObjAddr: 0x4A0, symBinAddr: 0x100000A40, symSize: 0x64 }
+  - { offset: 0x5640, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P13270.cpp, symObjAddr: 0x4A0, symBinAddr: 0x100000A40, symSize: 0x64 }
+  - { offset: 0x5BAC, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x300, symBinAddr: 0x100000AC0, symSize: 0x1A0 }
+  - { offset: 0x5F50, size: 0x8, addend: 0x0, symName: __Z7get_minNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, symObjAddr: 0x0, symBinAddr: 0x1000007A0, symSize: 0x294 }
+...

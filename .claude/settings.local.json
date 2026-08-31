@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(g++:*)",
+      "Bash(g++-15:*)",
+      "Bash(echo:*)",
+      "Bash(/Users/jerry/code_cpp_hxr/test_20260215)",
+      "Bash(brew list:*)",
+      "Bash(/opt/homebrew/bin/g++-15:*)",
+      "Bash(/opt/homebrew/bin/gcc-15:*)"
+    ]
+  }
+}

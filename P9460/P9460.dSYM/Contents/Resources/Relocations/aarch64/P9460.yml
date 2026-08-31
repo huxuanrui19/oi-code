@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/P9460'
+relocations:
+  - { offset: 0x3B5D, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xB85ACC, symBinAddr: 0x100B79B8C, symSize: 0x0 }
+  - { offset: 0x3BCD, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0xB85AC8, symBinAddr: 0x100B79B88, symSize: 0x0 }
+  - { offset: 0x3BE3, size: 0x8, addend: 0x0, symName: _k, symObjAddr: 0xB85AC4, symBinAddr: 0x100B79B84, symSize: 0x0 }
+  - { offset: 0x3BF9, size: 0x8, addend: 0x0, symName: _cnt, symObjAddr: 0xB85AC0, symBinAddr: 0x100B79B80, symSize: 0x0 }
+  - { offset: 0x3C1E, size: 0x8, addend: 0x0, symName: _a, symObjAddr: 0x7B5198, symBinAddr: 0x1007A9258, symSize: 0x0 }
+  - { offset: 0x3C34, size: 0x8, addend: 0x0, symName: _at, symObjAddr: 0x3E4870, symBinAddr: 0x1003D8930, symSize: 0x0 }
+  - { offset: 0x3C4A, size: 0x8, addend: 0x0, symName: _sum, symObjAddr: 0x13F40, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x3DD5, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P9460.cpp, symObjAddr: 0x6E0, symBinAddr: 0x100000BC0, symSize: 0x38 }
+  - { offset: 0x3DEC, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P9460.cpp, symObjAddr: 0x6E0, symBinAddr: 0x100000BC0, symSize: 0x38 }
+  - { offset: 0x48FF, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x460, symBinAddr: 0x100000C00, symSize: 0x270 }
+  - { offset: 0x4C06, size: 0x8, addend: 0x0, symName: __Z3cali, symObjAddr: 0x380, symBinAddr: 0x100000AE0, symSize: 0xCC }
+  - { offset: 0x4DCA, size: 0x8, addend: 0x0, symName: __ZSt13__adjust_heapIPiliN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_T0_S8_T1_T2_.isra.0, symObjAddr: 0x0, symBinAddr: 0x100000760, symSize: 0x104 }
+  - { offset: 0x4F0F, size: 0x8, addend: 0x0, symName: __ZSt16__insertion_sortIPiN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_S7_T0_.isra.0, symObjAddr: 0x104, symBinAddr: 0x100000864, symSize: 0xDC }
+  - { offset: 0x5231, size: 0x8, addend: 0x0, symName: __ZSt16__introsort_loopIPilN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_S7_T0_T1_.isra.0, symObjAddr: 0x1E0, symBinAddr: 0x100000940, symSize: 0x1A0 }
+...

@@ -1,0 +1,23 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/P17001'
+relocations:
+  - { offset: 0x3B71, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x20DF8, symBinAddr: 0x100013D78, symSize: 0x0 }
+  - { offset: 0x3BD3, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0x20DF0, symBinAddr: 0x100013D70, symSize: 0x0 }
+  - { offset: 0x3BE9, size: 0x8, addend: 0x0, symName: _p, symObjAddr: 0x20DE8, symBinAddr: 0x100013D68, symSize: 0x0 }
+  - { offset: 0x3BFF, size: 0x8, addend: 0x0, symName: _cnt, symObjAddr: 0x20DE0, symBinAddr: 0x100013D60, symSize: 0x0 }
+  - { offset: 0x3C22, size: 0x8, addend: 0x0, symName: _l, symObjAddr: 0x1EE50, symBinAddr: 0x100011DD0, symSize: 0x0 }
+  - { offset: 0x3C38, size: 0x8, addend: 0x0, symName: _r, symObjAddr: 0x1CEC0, symBinAddr: 0x10000FE40, symSize: 0x0 }
+  - { offset: 0x3C5B, size: 0x8, addend: 0x0, symName: _x, symObjAddr: 0x18FA0, symBinAddr: 0x10000BF20, symSize: 0x0 }
+  - { offset: 0x3C71, size: 0x8, addend: 0x0, symName: _a, symObjAddr: 0x17010, symBinAddr: 0x100009F90, symSize: 0x0 }
+  - { offset: 0x3C87, size: 0x8, addend: 0x0, symName: _ans, symObjAddr: 0x15080, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x3DE6, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P17001.cpp, symObjAddr: 0x9A0, symBinAddr: 0x100000B40, symSize: 0x38 }
+  - { offset: 0x3DFD, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P17001.cpp, symObjAddr: 0x9A0, symBinAddr: 0x100000B40, symSize: 0x38 }
+  - { offset: 0x4A2C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x400, symBinAddr: 0x100000B80, symSize: 0x590 }
+  - { offset: 0x50E3, size: 0x8, addend: 0x0, symName: __ZSt13__adjust_heapIPxlxN9__gnu_cxx5__ops15_Iter_less_iterEEvT_T0_S5_T1_T2_.isra.0, symObjAddr: 0x0, symBinAddr: 0x100000760, symSize: 0x104 }
+  - { offset: 0x51D3, size: 0x8, addend: 0x0, symName: __ZSt16__insertion_sortIPxN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_.isra.0, symObjAddr: 0x104, symBinAddr: 0x100000864, symSize: 0xDC }
+  - { offset: 0x5498, size: 0x8, addend: 0x0, symName: __ZSt16__introsort_loopIPxlN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_T1_.isra.0, symObjAddr: 0x1E0, symBinAddr: 0x100000940, symSize: 0x1A0 }
+  - { offset: 0x58BF, size: 0x8, addend: 0x0, symName: __ZSt13__lower_boundIPxxN9__gnu_cxx5__ops14_Iter_less_valEET_S4_S4_RKT0_T1_.isra.0, symObjAddr: 0x380, symBinAddr: 0x100000AE0, symSize: 0x44 }
+  - { offset: 0x58FB, size: 0x8, addend: 0x0, symName: __ZSt13__lower_boundIPxxN9__gnu_cxx5__ops14_Iter_less_valEET_S4_S4_RKT0_T1_.isra.0, symObjAddr: 0x380, symBinAddr: 0x100000AE0, symSize: 0x44 }
+  - { offset: 0x5926, size: 0x8, addend: 0x0, symName: __ZSt13__lower_boundIPxxN9__gnu_cxx5__ops14_Iter_less_valEET_S4_S4_RKT0_T1_.isra.0, symObjAddr: 0x380, symBinAddr: 0x100000AE0, symSize: 0x44 }
+...

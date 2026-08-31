@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/P12877/P12877'
+relocations:
+  - { offset: 0x32A3, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x16EFDD8, symBinAddr: 0x1016EB7E8, symSize: 0x0 }
+  - { offset: 0x3307, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0x16EFDD0, symBinAddr: 0x1016EB7E0, symSize: 0x0 }
+  - { offset: 0x332C, size: 0x8, addend: 0x0, symName: _a, symObjAddr: 0x131F480, symBinAddr: 0x10131AE90, symSize: 0x0 }
+  - { offset: 0x3342, size: 0x8, addend: 0x0, symName: _b, symObjAddr: 0xF4EB30, symBinAddr: 0x100F4A540, symSize: 0x0 }
+  - { offset: 0x3367, size: 0x8, addend: 0x0, symName: _s, symObjAddr: 0x7AD890, symBinAddr: 0x1007A92A0, symSize: 0x0 }
+  - { offset: 0x337D, size: 0x8, addend: 0x0, symName: _t, symObjAddr: 0x3DCF40, symBinAddr: 0x1003D8950, symSize: 0x0 }
+  - { offset: 0x3393, size: 0x8, addend: 0x0, symName: _nxt, symObjAddr: 0xC5F0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x34EC, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P12877.cpp, symObjAddr: 0x380, symBinAddr: 0x100000760, symSize: 0x38 }
+  - { offset: 0x3503, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P12877.cpp, symObjAddr: 0x380, symBinAddr: 0x100000760, symSize: 0x38 }
+  - { offset: 0x35CF, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x20, symBinAddr: 0x1000007A0, symSize: 0x350 }
+...

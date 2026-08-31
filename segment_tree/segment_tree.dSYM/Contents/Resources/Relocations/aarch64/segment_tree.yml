@@ -1,0 +1,21 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/segment_tree'
+relocations:
+  - { offset: 0x32A3, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x44B8110, symBinAddr: 0x1044B24E0, symSize: 0x0 }
+  - { offset: 0x330D, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0x44B8108, symBinAddr: 0x1044B24D8, symSize: 0x0 }
+  - { offset: 0x3323, size: 0x8, addend: 0x0, symName: _q, symObjAddr: 0x44B8100, symBinAddr: 0x1044B24D0, symSize: 0x0 }
+  - { offset: 0x3348, size: 0x8, addend: 0x0, symName: _a, symObjAddr: 0x3D16EB0, symBinAddr: 0x103D11280, symSize: 0x0 }
+  - { offset: 0x336D, size: 0x8, addend: 0x0, symName: _tree, symObjAddr: 0x1E92570, symBinAddr: 0x101E8C940, symSize: 0x0 }
+  - { offset: 0x3383, size: 0x8, addend: 0x0, symName: _tag, symObjAddr: 0xDC30, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x34E2, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_segment_tree.cpp, symObjAddr: 0x5C0, symBinAddr: 0x100000B80, symSize: 0x38 }
+  - { offset: 0x34F9, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_segment_tree.cpp, symObjAddr: 0x5C0, symBinAddr: 0x100000B80, symSize: 0x38 }
+  - { offset: 0x35BF, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x420, symBinAddr: 0x100000BC0, symSize: 0x188 }
+  - { offset: 0x3786, size: 0x8, addend: 0x0, symName: __Z5queryiiiii, symObjAddr: 0x324, symBinAddr: 0x100000A84, symSize: 0xF0 }
+  - { offset: 0x3877, size: 0x8, addend: 0x0, symName: __Z9push_downiii, symObjAddr: 0x180, symBinAddr: 0x1000008E0, symSize: 0x80 }
+  - { offset: 0x39E1, size: 0x8, addend: 0x0, symName: __Z5buildiii.part.0, symObjAddr: 0x0, symBinAddr: 0x100000760, symSize: 0xE8 }
+  - { offset: 0x3AAA, size: 0x8, addend: 0x0, symName: __Z7push_upi, symObjAddr: 0xE8, symBinAddr: 0x100000848, symSize: 0x24 }
+  - { offset: 0x3ACF, size: 0x8, addend: 0x0, symName: __Z5buildiii, symObjAddr: 0x10C, symBinAddr: 0x10000086C, symSize: 0x34 }
+  - { offset: 0x3B0C, size: 0x8, addend: 0x0, symName: __Z6addtagiiix, symObjAddr: 0x140, symBinAddr: 0x1000008A0, symSize: 0x40 }
+  - { offset: 0x3B4B, size: 0x8, addend: 0x0, symName: __Z6updateiiiiix, symObjAddr: 0x200, symBinAddr: 0x100000960, symSize: 0x124 }
+...

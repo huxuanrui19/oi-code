@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/P3388'
+relocations:
+  - { offset: 0x4A34, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xC3DF8, symBinAddr: 0x1000B7DF8, symSize: 0x0 }
+  - { offset: 0x4BC1, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0xC3DF4, symBinAddr: 0x1000B7DF4, symSize: 0x0 }
+  - { offset: 0x4BD7, size: 0x8, addend: 0x0, symName: _m, symObjAddr: 0xC3DF0, symBinAddr: 0x1000B7DF0, symSize: 0x0 }
+  - { offset: 0x4BFA, size: 0x8, addend: 0x0, symName: _g, symObjAddr: 0x4EA00, symBinAddr: 0x100042A00, symSize: 0x0 }
+  - { offset: 0x4C10, size: 0x8, addend: 0x0, symName: _tot, symObjAddr: 0x4E9F8, symBinAddr: 0x1000429F8, symSize: 0x0 }
+  - { offset: 0x4C33, size: 0x8, addend: 0x0, symName: _dfn, symObjAddr: 0x3B150, symBinAddr: 0x10002F150, symSize: 0x0 }
+  - { offset: 0x4C49, size: 0x8, addend: 0x0, symName: _low, symObjAddr: 0x278A8, symBinAddr: 0x10001B8A8, symSize: 0x0 }
+  - { offset: 0x4C5F, size: 0x8, addend: 0x0, symName: _iscut, symObjAddr: 0x14000, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x4DC9, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P3388.cpp, symObjAddr: 0x4E0, symBinAddr: 0x100000980, symSize: 0x7C }
+  - { offset: 0x4DE0, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P3388.cpp, symObjAddr: 0x4E0, symBinAddr: 0x100000980, symSize: 0x7C }
+  - { offset: 0x4E66, size: 0x8, addend: 0x0, symName: ___tcfg, symObjAddr: 0x0, symBinAddr: 0x100000760, symSize: 0x4C }
+  - { offset: 0x522E, size: 0x8, addend: 0x0, symName: __ZNSt6vectorIiSaIiEE17_M_realloc_appendIJRKiEEEvDpOT_, symObjAddr: 0x160, symBinAddr: 0x1000008C0, symSize: 0xB8 }
+  - { offset: 0x58D9, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x260, symBinAddr: 0x100000A00, symSize: 0x268 }
+  - { offset: 0x5B87, size: 0x8, addend: 0x0, symName: __Z6tarjanii, symObjAddr: 0x4C, symBinAddr: 0x1000007AC, symSize: 0x114 }
+...
