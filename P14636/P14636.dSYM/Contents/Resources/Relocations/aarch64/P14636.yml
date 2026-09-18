@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jerry/code_cpp_hxr/P14636/P14636'
+relocations:
+  - { offset: 0x3A05, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x58460, symBinAddr: 0x10004C800, symSize: 0x0 }
+  - { offset: 0x3A82, size: 0x8, addend: 0x0, symName: _n, symObjAddr: 0x58458, symBinAddr: 0x10004C7F8, symSize: 0x0 }
+  - { offset: 0x3A98, size: 0x8, addend: 0x0, symName: _m, symObjAddr: 0x58450, symBinAddr: 0x10004C7F0, symSize: 0x0 }
+  - { offset: 0x3ABB, size: 0x8, addend: 0x0, symName: _a, symObjAddr: 0x4E7C0, symBinAddr: 0x100042B60, symSize: 0x0 }
+  - { offset: 0x3ADE, size: 0x8, addend: 0x0, symName: _fac, symObjAddr: 0x3AEA0, symBinAddr: 0x10002F240, symSize: 0x0 }
+  - { offset: 0x3AF4, size: 0x8, addend: 0x0, symName: _inv, symObjAddr: 0x27580, symBinAddr: 0x10001B920, symSize: 0x0 }
+  - { offset: 0x3B0A, size: 0x8, addend: 0x0, symName: _pow2, symObjAddr: 0x13C60, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x3C6F, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P14636.cpp, symObjAddr: 0xA00, symBinAddr: 0x100000C80, symSize: 0x38 }
+  - { offset: 0x3C86, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_P14636.cpp, symObjAddr: 0xA00, symBinAddr: 0x100000C80, symSize: 0x38 }
+  - { offset: 0x46C4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x540, symBinAddr: 0x100000CC0, symSize: 0x4C0 }
+  - { offset: 0x4ADE, size: 0x8, addend: 0x0, symName: __Z4initv, symObjAddr: 0x380, symBinAddr: 0x100000AE0, symSize: 0x19C }
+  - { offset: 0x4BA0, size: 0x8, addend: 0x0, symName: __ZSt13__adjust_heapIPxlxN9__gnu_cxx5__ops15_Iter_less_iterEEvT_T0_S5_T1_T2_.isra.0, symObjAddr: 0x0, symBinAddr: 0x100000760, symSize: 0x104 }
+  - { offset: 0x4C92, size: 0x8, addend: 0x0, symName: __ZSt16__insertion_sortIPxN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_.isra.0, symObjAddr: 0x104, symBinAddr: 0x100000864, symSize: 0xDC }
+  - { offset: 0x4F58, size: 0x8, addend: 0x0, symName: __ZSt16__introsort_loopIPxlN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_T1_.isra.0, symObjAddr: 0x1E0, symBinAddr: 0x100000940, symSize: 0x1A0 }
+...

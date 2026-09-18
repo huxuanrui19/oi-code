@@ -1,13 +1,13 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "GCC",
+            "label": "编译(调试)",
             "command": "/opt/homebrew/bin/g++-15",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-O2",
                 "-std=c++14",
                 "-Wall",
                 "-Wextra",
@@ -26,16 +26,19 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "调试器生成的任务。"
+            "detail": "无优化，用于日常调试和运行"
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++-15 生成活动文件",
+            "label": "编译(O2)",
             "command": "/opt/homebrew/bin/g++-15",
             "args": [
                 "-fdiagnostics-color=always",
-                "-g",
+                "-O2",
                 "-std=c++14",
+                "-Wall",
+                "-Wextra",
+                "-DLOCAL",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
@@ -47,8 +50,18 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "调试器生成的任务。"
+            "detail": "开优化，模拟评测机，交题前用"
+        },
+        {
+            "type": "shell",
+            "label": "编译并运行",
+            "command": "./${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": "编译(调试)",
+            "problemMatcher": [],
+            "detail": "一键编译并运行当前文件"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
