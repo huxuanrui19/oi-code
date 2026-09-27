@@ -5,7 +5,7 @@ const int N=5e5+10;
 ll n,a[N],b[N],s[N<<1],t[N],nxt[N];
 int main(){
     //freopen(".in","r",stdin);
-    //freopen(".out","r",stdout);
+    //freopen(".out","w",stdout);
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin>>n;
     for(int i=0;i<n;i++) cin>>a[i];

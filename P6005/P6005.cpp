@@ -7,7 +7,7 @@ ll n,m,a[N],dp[N][N];
 ll c;
 int main(){
     //freopen(".in","r",stdin);
-    //freopen(".out","r",stdout);
+    //freopen(".out","w",stdout);
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin>>n>>m>>c;
     for(int i=1;i<=n;i++) cin>>a[i];

@@ -53,7 +53,7 @@ ll query(int p,int pl,int pr,int L,int R){
 }
 int main(){
     //freopen(".in","r",stdin);
-    //freopen(".out","r",stdout);
+    //freopen(".out","w",stdout);
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin>>n>>t>>q;
     build(1,1,n);

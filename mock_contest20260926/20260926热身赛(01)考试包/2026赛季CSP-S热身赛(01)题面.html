@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026赛季 CSP-S 复赛热身赛 (01)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root {
+    --bg: #eef1f5;
+    --panel-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6470;
+    --border: #d8dee6;
+    --accent: #2563eb;
+    --accent-soft: #e8f0fe;
+    --code-bg: #1e293b;
+    --code-text: #e2e8f0;
+    --code-head: #0f172a;
+    --shadow: 0 1px 3px rgba(16,24,40,.08), 0 8px 24px rgba(16,24,40,.06);
+  }
+  [data-theme="dark"] {
+    --bg: #0d1117;
+    --panel-bg: #161b22;
+    --text: #e6edf3;
+    --muted: #9198a1;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --accent-soft: #14243d;
+    --code-bg: #0b1220;
+    --code-text: #e2e8f0;
+    --code-head: #060a12;
+    --shadow: 0 1px 3px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC",
+                 "Noto Sans CJK SC", sans-serif;
+    font-size: 15.5px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+  }
+
+  /* ---------- 顶部 ---------- */
+  header.site {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  header.site h1 {
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: .3px;
+    line-height: 1.4;
+  }
+  header.site h1 .sub {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: .5px;
+    margin-top: 2px;
+  }
+
+  .theme-btn {
+    border: 1px solid var(--border);
+    background: var(--panel-bg);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .2s ease;
+    font-family: inherit;
+  }
+  .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---------- 封面页 ---------- */
+  .cover-page {
+    text-align: center;
+    padding: 44px 28px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+  }
+  .cover-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: -26px -10px 8px;
+  }
+  .cover-page h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .cover-page h2 {
+    font-size: 22px;
+    margin: 4px 0 0;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+  .cover-page .date {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 26px 0 28px;
+  }
+  .cover-page .table-scroll {
+    margin: 0 auto 16px;
+    text-align: left;
+  }
+  .cover-page table {
+    min-width: 620px;
+    margin: 0 auto;
+  }
+  .cover-page th {
+    background: var(--accent-soft);
+    font-weight: 700;
+    padding: 9px 10px;
+  }
+  .cover-page td {
+    padding: 9px 10px;
+  }
+  .cover-page .section-title {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 22px 0 8px;
+    color: var(--text);
+  }
+  .cover-page .notice {
+    text-align: left;
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-top: 26px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .cover-page .notice h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+  .cover-page .notice ol {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .cover-page .notice li {
+    margin: 6px 0;
+  }
+
+  /* ---------- 目录 ---------- */
+  nav.toc {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 26px;
+    font-size: 14px;
+  }
+  nav.toc strong {
+    color: var(--muted);
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  nav.toc a {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 6px;
+    transition: background .18s ease;
+    margin: 2px 0;
+  }
+  nav.toc a:hover { background: var(--accent-soft); }
+
+  /* ---------- 题面面板 ---------- */
+  .panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px 34px 36px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+  }
+
+  .problem-title {
+    font-size: 24px;
+    margin: 0 0 12px;
+    line-height: 1.4;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .problem-title .en-title {
+    font-size: 0.6em;
+    color: var(--muted);
+    font-weight: 400;
+    margin-left: 10px;
+    font-style: italic;
+    letter-spacing: .5px;
+  }
+
+  .limits {
+    display: inline-flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .limits span strong {
+    color: var(--text);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .block { margin-top: 26px; }
+  .block > h2 {
+    font-size: 17px;
+    margin: 0 0 12px;
+    padding-left: 11px;
+    border-left: 4px solid var(--accent);
+    line-height: 1.5;
+  }
+  .block > h3 {
+    font-size: 15.5px;
+    margin: 18px 0 8px;
+    color: var(--muted);
+  }
+
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0; padding-left: 26px; }
+  li { margin: 5px 0; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  strong { font-weight: 700; }
+  code {
+    font-family: "JetBrains Mono", "Cascadia Code", Consolas, Menlo, monospace;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 1.5px 6px;
+    border-radius: 5px;
+    font-size: .89em;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px dashed var(--border);
+    margin: 24px 0;
+  }
+
+  blockquote {
+    margin: 14px 0;
+    padding: 10px 18px;
+    border-left: 4px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 8px 8px 0;
+  }
+  blockquote p { margin: 4px 0; }
+
+  /* ---------- 样例 ---------- */
+  .sample-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0;
+  }
+  @media (max-width: 700px) { .sample-grid { grid-template-columns: 1fr; } }
+
+  .sample-block {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--code-bg);
+  }
+  .sample-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--code-head);
+    color: #94a3b8;
+    font-size: 12.5px;
+    letter-spacing: .6px;
+    padding: 7px 12px;
+    font-family: inherit;
+  }
+  .copy-btn {
+    border: 1px solid #334155;
+    background: transparent;
+    color: #94a3b8;
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all .18s ease;
+  }
+  .copy-btn:hover { color: #fff; border-color: #64748b; background: #334155; }
+  .sample-block pre {
+    margin: 0;
+    padding: 12px 14px;
+    color: var(--code-text);
+    font-family: "JetBrains Mono", "Cascadia Code", Consolas, Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.65;
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  /* ---------- 表格 ---------- */
+  .table-scroll { overflow-x: auto; margin: 14px 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    min-width: 480px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  th {
+    background: var(--accent-soft);
+    font-weight: 600;
+    color: var(--text);
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,.045); }
+
+  /* ---------- 图片 ---------- */
+  .img-box {
+    text-align: center;
+    margin: 16px 0;
+  }
+  .img-box img {
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    padding: 6px;
+  }
+
+  .note {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .katex-display { overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
+
+  footer.site {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 34px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============================================================ -->
+  <!-- ========================= 封面页 =========================== -->
+  <!-- ============================================================ -->
+  <div class="cover-page" id="cover">
+    <div class="cover-toolbar"><button class="theme-btn" id="themeBtn" type="button">🌙 深色模式</button></div>
+    <h1>天行健团队 | CSP-S 复赛热身赛 (01)</h1>
+    <h2>Tianxingjian Warm-up Contest</h2>
+    <div class="date">时间：2026 年 09 月 26 日</div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>题目名称</th>
+            <th>题目类型</th>
+            <th>目录</th>
+            <th>可执行文件名</th>
+            <th>输入文件名</th>
+            <th>输出文件名</th>
+            <th>每个测试点时限</th>
+            <th>内存限制</th>
+            <th>子任务数目</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>石子游戏</td><td>传统型</td><td>stone</td><td>stone</td><td>stone.in</td><td>stone.out</td><td>0.5秒</td><td>512 MiB</td><td>5</td>
+          </tr>
+          <tr>
+            <td>序列分段</td><td>传统型</td><td>partition</td><td>partition</td><td>partition.in</td><td>partition.out</td><td>1.0秒</td><td>128 MiB</td><td>5</td>
+          </tr>
+          <tr>
+            <td>染色方案</td><td>传统型</td><td>color</td><td>color</td><td>color.in</td><td>color.out</td><td>0.5秒</td><td>128 MiB</td><td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-title">提交源程序文件名</div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">语言</th>
+            <th scope="col">石子游戏<br>stone</th>
+            <th scope="col">序列分段<br>partition</th>
+            <th scope="col">染色方案<br>color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>对于 C++ 语言</td>
+            <td><code>stone.cpp</code></td>
+            <td><code>partition.cpp</code></td>
+            <td><code>color.cpp</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-title">编译选项</div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">语言</th>
+            <th scope="col">编译选项</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>对于 C++ 语言</td>
+            <td><code>-O2 -std=c++14 -Wall</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notice">
+      <h3>注意事项（请仔细阅读）</h3>
+      <ol>
+        <li>文件名（程序名和输入输出文件名）必须使用英文小写。</li>
+        <li>C++ 中 <code>main</code> 函数的返回值类型必须是 <code>int</code>，程序正常结束时的返回值必须是 <code>0</code>。</li>
+        <li>若无特殊说明，结果的比较方式为全文比较（过滤行末空格及文末回车）。</li>
+        <li>选手提交的程序源文件的大小不得超过 <code>100KB</code>。</li>
+        <li>程序可使用的栈空间内存限制与题目的内存限制一致。</li>
+        <li>禁止在源代码中改变编译器参数（如使用 <code>#pragma</code> 命令），禁止使用系统结构相关指令（如内联汇编）和其他可能造成不公平的方法。</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ========================= 目录 ============================= -->
+  <!-- ============================================================ -->
+  <nav class="toc">
+    <strong>目录：</strong>
+    <a href="#p1">T1 石子游戏 Stone</a>
+    <a href="#p2">T2 序列分段 Partition</a>
+    <a href="#p3">T3 染色方案 Color</a>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- ========================== T1 ============================== -->
+  <!-- ============================================================ -->
+  <div class="panel" id="p1">
+    <h1 class="problem-title">石子游戏 <span class="en-title">Stone</span></h1>
+    <div class="limits">
+      <span><strong>时间限制：</strong>500ms</span>
+      <span><strong>内存限制：</strong>512 MiB</span>
+    </div>
+
+    <section class="block">
+      <h2>题目描述</h2>
+      <p>Rin 和爸爸还在地球上时，他们经常玩一个石子游戏。</p>
+      <p>爸爸摆出了 $n$ 堆石子，这 $n$ 堆石子编号为 $1$ 到 $n$。</p>
+      <p>游戏规则是这样的，每次 Rin 可以抓取石子，有两种抓取方式：</p>
+      <ul>
+        <li>选择一个数 $i$，把第 $i$ 堆石子抓取走，代价为 $i\times p$。</li>
+        <li>选择两个<strong>不同</strong>的数 $i,j$（$i\ne j$），把第 $i$ 堆和第 $j$ 堆石子抓走，代价为 $|i-j|\times q$。</li>
+      </ul>
+      <p>其中 $p,q$ 为爸爸提前定好的常数。</p>
+      <p>Rin 想知道，抓取完所有石子至少需要多少代价。</p>
+      <p>你只有 0.5 秒的时间帮助 Rin 算出这个结果哦！</p>
+    </section>
+
+    <section class="block">
+      <h2>输入格式</h2>
+      <p><strong>本题多测</strong>，第一行一个整数 $T$ 代表数据组数。</p>
+      <p>接下来 $T$ 行，每行三个整数 $n,p,q$ 代表石子堆数，和两个常数。</p>
+    </section>
+
+    <section class="block">
+      <h2>输出格式</h2>
+      <p>$T$ 行每行一个整数代表答案。</p>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #1</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #1</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>2
+5 2 3
+4 1 5</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #1</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>8
+8</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #2</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #2</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>见附件</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #2</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>见附件</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>说明 / 提示</h2>
+
+      <h3>样例 1 解释</h3>
+      <p>第一组数据：</p>
+      <ol>
+        <li>利用第一个操作，拿走第 $1$ 堆石子，代价为 $1\times 2=2$。</li>
+        <li>利用第二个操作，拿走第 $2,3$ 堆石子，代价为 $|2-3|\times 3=3$。</li>
+        <li>利用第二个操作，拿走第 $4,5$ 堆石子，代价为 $|4-5|\times 3=3$。</li>
+      </ol>
+      <p>最小代价为 $2+3+3=8$。</p>
+
+      <p>第二组数据：</p>
+      <ol>
+        <li>利用第一个操作，拿走第 $1$ 堆石子，代价为 $1\times 1=1$。</li>
+        <li>利用第一个操作，拿走第 $2$ 堆石子，代价为 $2\times 1=2$。</li>
+        <li>利用第二个操作，拿走第 $3,4$ 堆石子，代价为 $|3-4|\times 5=5$。</li>
+      </ol>
+      <p>最小代价为 $1+2+5=8$。</p>
+
+      <h3>数据规模与约定</h3>
+      <p><strong>本题采用捆绑测试。</strong></p>
+      <ul>
+        <li>Subtask 1（1 pt）：$p,q=0$。</li>
+        <li>Subtask 2（1 pt）：$n=1$。</li>
+        <li>Subtask 3（30 pts）：$T \le 5 \times 10^4$，$n \le 5 \times 10^5$。</li>
+        <li>Subtask 4（33 pts）：$T \le 10^6$，$n \le 5 \times 10^5$。</li>
+        <li>Subtask 5（35 pts）：无特殊限制。</li>
+      </ul>
+      <p>对于 $100\%$ 的数据，$1 \le n \le 10^9$，$0 \le p,q \le 100$，$1 \le T \le 10^6$。</p>
+      <p class="note">附件中的 Extra Example 满足 $T=10^4$，可供调试使用。</p>
+    </section>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ========================== T2 ============================== -->
+  <!-- ============================================================ -->
+  <div class="panel" id="p2">
+    <h1 class="problem-title">序列分段 <span class="en-title">Partition</span></h1>
+    <div class="limits">
+      <span><strong>时间限制：</strong>1.0s</span>
+      <span><strong>内存限制：</strong>128 MiB</span>
+    </div>
+
+    <section class="block">
+      <h2>题目描述</h2>
+      <p>给定序列 $\{a_n\}$，满足每一项都不小于前一项。对于所有不超过 $k$ 的正整数 $m$，询问如果将 $a$ 分成 $m$ 段（可以有空段），并给从前往后第 $i$ 段内的每个数都加上 $i$，增加后的 $\sum\limits_{j=1}^n a_j^2$ 最大是多少。询问相互独立，即每次询问时给每个数加的值不保留到下一次询问。</p>
+      <p>例如，对于序列 $\{-3,1,2,2\}$，若 $m=5$，则一种分段方式是 $[-3][][1,2][][2]$，增加后的序列是 $-2,4,5,7$，此时 $\sum\limits_{j=1}^n a_j^2=94$。<span class="note">（此处仅用于演示「分段 + 按段号加值」的规则，$94$ 并非 $m=5$ 时的最优值。）</span></p>
+      <p>记 $m=i$ 时的答案（即此时最大的 $\sum\limits_{j=1}^n a_j^2$）为 $q_i$，出于良心考虑，你只需要输出 $\left(\sum\limits_{i=1}^k q_i\right) \bmod 998244353$ 即可。标准程序不基于特殊的输出方式，即能独立求出每一个 $q_i$。</p>
+    </section>
+
+    <section class="block">
+      <h2>输入格式</h2>
+      <p>第一行两个正整数 $n,k$，同题意。</p>
+      <p>接下来一行 $n$ 个整数，表示 $\{a_n\}$。</p>
+    </section>
+
+    <section class="block">
+      <h2>输出格式</h2>
+      <p>一行一个整数，表示 $\left(\sum\limits_{i=1}^k q_i\right) \bmod 998244353$。</p>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #1</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #1</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>4 3
+-3 1 2 2</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #1</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>141</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #2</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #2</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>见附件</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #2</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>见附件</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>说明 / 提示</h2>
+
+      <h3>样例解释</h3>
+      <p>当 $m=1$ 时，最优策略是 $[-3,1,2,2]$，$q_1=(-2)^2+2^2+3^2+3^2=26$。</p>
+      <p>当 $m=2$ 时，最优策略是 $[-3][1,2,2]$，$q_2=(-2)^2+3^2+4^2+4^2=45$。</p>
+      <p>当 $m=3$ 时，最优策略是 $[-3][][1,2,2]$，$q_3=(-2)^2+4^2+5^2+5^2=70$。</p>
+      <p>则 $\left(\sum\limits_{i=1}^k q_i\right) \bmod 998244353=(q_1+q_2+q_3)\bmod 998244353=(26+45+70)\bmod 998244353=141$。</p>
+
+      <h3>数据范围与约定</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>测试点编号</th>
+              <th>分数</th>
+              <th>$n\leq$</th>
+              <th>$k\leq$</th>
+              <th>$|a_i|\leq$</th>
+              <th>特殊性质</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>$1\sim 3$</td><td>$15$</td><td>$12$</td><td>$12$</td><td>$1000$</td><td>无</td></tr>
+            <tr><td>$4\sim 6$</td><td>$15$</td><td>$1000$</td><td>$1000$</td><td>$1000$</td><td>无</td></tr>
+            <tr><td>$7\sim 8$</td><td>$10$</td><td>$10^6$</td><td>$10^6$</td><td>$10^7$</td><td>$a_i\geq0$</td></tr>
+            <tr><td>$9\sim 12$</td><td>$20$</td><td>$10^6$</td><td>$1000$</td><td>$10^7$</td><td>无</td></tr>
+            <tr><td>$13\sim 20$</td><td>$40$</td><td>$10^6$</td><td>$10^7$</td><td>$10^7$</td><td>无</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ========================== T3 ============================== -->
+  <!-- ============================================================ -->
+  <div class="panel" id="p3">
+    <h1 class="problem-title">染色方案 <span class="en-title">Color</span></h1>
+    <div class="limits">
+      <span><strong>时间限制：</strong>500ms</span>
+      <span><strong>内存限制：</strong>128 MiB</span>
+    </div>
+
+    <section class="block">
+      <h2>题目描述</h2>
+      <p><strong>请注意到并不正常的时间限制。</strong></p>
+      <p>小 C 有一棵 $dep$ 层 $n$ 个节点的<strong>完全二叉树</strong>，她希望选择其中一个<strong>包含根节点</strong>的<strong>连通块</strong>染色，她想知道有几种不同的染色方案，答案对 $998,244,353$ 取模。</p>
+    </section>
+
+    <section class="block">
+      <h2>输入格式</h2>
+      <p>多测，第一行一个整数 $T$，表示测试组数。</p>
+      <p><strong>对于每组数据：</strong></p>
+      <p>第一行一个整数 $dep$，同题意。</p>
+      <p>第二行一个长度为 $dep$ 的 <code>01</code> 串，表示最底层叶子结点数目 $s$ 的二进制形式；若 $s$ 的二进制不足 $dep$ 位，则在串首补 $0$（前导零）。</p>
+      <p><strong>保证数据合法</strong>，即 $1 \le s \le 2^{dep-1}$。</p>
+    </section>
+
+    <section class="block">
+      <h2>输出格式</h2>
+      <p>对于每组数据，一行一个整数，表示合法的染色方案的个数，需要<strong>换行</strong>。</p>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #1</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #1</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>1
+2
+10</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #1</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>4</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #2</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #2</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>1
+3
+100</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #2</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>25</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #3</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #3</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>1
+3
+010</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #3</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>10</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>输入输出样例 #4</h2>
+      <div class="sample-grid">
+        <div class="sample-block">
+          <div class="sample-header"><span>输入 #4</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>见附件</pre>
+        </div>
+        <div class="sample-block">
+          <div class="sample-header"><span>输出 #4</span><button class="copy-btn" data-copy>复制</button></div>
+          <pre>见附件</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>说明 / 提示</h2>
+
+      <h3>样例解释</h3>
+      <p>对于样例 #1，可以画出如下所示二叉树。</p>
+      <div class="img-box">
+        <img src="https://s4.ax1x.com/2022/01/19/7sc6Yj.png" alt="样例1 完全二叉树">
+      </div>
+      <p>我们对该二叉树按照<strong>前序遍历标号</strong>（如图），得到点集 $\left(1,2,3\right)$。</p>
+      <p>则仅有 $\left(1,2,3\right),\left(1,2\right),\left(1,3\right),\left(1\right)$ 是合法的染色方案。</p>
+
+      <hr>
+
+      <p>对于样例 #3，可以画出如下所示二叉树。</p>
+      <div class="img-box">
+        <img src="https://s4.ax1x.com/2022/01/19/7sc1eO.png" alt="样例3 完全二叉树">
+      </div>
+      <p>我们对该二叉树按照<strong>前序遍历标号</strong>（如图），得到点集 $\left(1,2,3,4,5\right)$。</p>
+      <p>则仅有 $\left(1,2,3,4,5\right),\left(1,2,3,4\right),\left(1,2,3\right),\left(1,2,4\right),\left(1,2\right),\left(1,2,3,5\right),\left(1,2,4,5\right),\left(1,2,5\right),\left(1,5\right),\left(1\right)$ 是合法的染色方案。</p>
+      <p>显然 $\left(2,3,4\right),\left(1,3,4\right)$ 不是合法的染色方案，前者没有包含根节点，后者染色的点集不是联通的。</p>
+
+      <hr>
+
+      <h3>数据范围与约定</h3>
+      <p>对于 $30\%$ 的数据，$1\leq T\leq 10, 1\leq dep \leq 20$。</p>
+      <p>对于另外 $20\%$ 的数据，树是满二叉树（即完美二叉树，perfect binary tree）。</p>
+      <p>对于 $100\%$ 的数据，$1\leq T\leq 10, 1\leq dep \leq 10^6$。</p>
+    </section>
+  </div>
+
+  <footer class="site">
+    2026赛季 CSP-S 复赛热身赛 (01) · 题目版权归原作者所有
+  </footer>
+
+</div>
+
+<script>
+  /* ---------- 深色 / 浅色模式 ---------- */
+  const themeBtn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  const THEME_LABELS = { dark: '☀️ 浅色模式', light: '🌙 深色模式' };
+  const applyThemeBtn = () => {
+    if (!themeBtn) return;
+    themeBtn.textContent = THEME_LABELS[root.getAttribute('data-theme')] || THEME_LABELS.light;
+  };
+  try {
+    const saved = localStorage.getItem('csp-theme');
+    if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+  } catch (e) { /* 隐私模式下 localStorage 可能不可用 */ }
+  applyThemeBtn();
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      applyThemeBtn();
+      try { localStorage.setItem('csp-theme', next); } catch (e) {}
+    });
+  }
+
+  /* ---------- 主题跟随系统偏好（无用户手动选择时）---------- */
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const syncSystem = () => {
+      let hasSaved = false;
+      try { hasSaved = !!localStorage.getItem('csp-theme'); } catch (e) {}
+      if (hasSaved) return;
+      root.setAttribute('data-theme', mq.matches ? 'dark' : 'light');
+      applyThemeBtn();
+    };
+    mq.addEventListener ? mq.addEventListener('change', syncSystem) : null;
+    syncSystem();
+  }
+
+  /* ---------- 复制按钮 ---------- */
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pre = btn.closest('.sample-block').querySelector('pre');
+      const text = pre.innerText;
+      const done = () => {
+        const old = btn.textContent;
+        btn.textContent = '已复制 ✓';
+        setTimeout(() => { btn.textContent = old === '已复制 ✓' ? '复制' : old; }, 1400);
+      };
+      function fallback() {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+
+  /* ---------- KaTeX 渲染 ---------- */
+  function renderAllMath() {
+    if (typeof renderMathInElement !== 'function') {
+      console.warn('[math] KaTeX auto-render 未能加载，公式将保持 LaTeX 源码显示。');
+      return;
+    }
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\$$', right: '\$$', display: true },
+        { left: '$',  right: '$',  display: false },
+        { left: '\$', right: '\$', display: false }
+      ],
+      throwOnError: false,
+      errorColor: '#d1242f',
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option']
+    });
+  }
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', renderAllMath);
+  } else {
+    renderAllMath();
+  }
+</script>
+</body>
+</html>

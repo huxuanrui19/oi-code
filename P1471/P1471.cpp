@@ -72,7 +72,7 @@ inline ld get_var(int L,int R){
 }
 int main(){
     //freopen(".in","r",stdin);
-    //freopen(".out","r",stdout);
+    //freopen(".out","w",stdout);
     cin>>n>>m;
     for(int i=1;i<=n;i++) cin>>a[i];
     build(1,1,n);
