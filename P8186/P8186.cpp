@@ -2,7 +2,7 @@
 using namespace std;
 typedef long long ll;
 const int N=5e2+10;
-int n,ans[N],a[N][N],b[N][N];
+int n,a[N][N],b[N][N],g[N][N];
 int main(){
     //freopen(".in","r",stdin);
     //freopen(".out","w",stdout);
@@ -14,16 +14,26 @@ int main(){
             b[i][a[i][j]]=j;
         }
     }
-    for(int i=1;i<=n;i++) ans[i]=i;
-    for(int t=1;t<=n;t++){
-        for(int i=1;i<=n;i++){
-            for(int j=1;j<=n;j++){
-                if(b[i][ans[i]]>=b[i][ans[j]]&&b[j][ans[j]]>=b[j][ans[i]]){
-                    swap(ans[i],ans[j]);
-                }
-            }
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==j) continue;
+            if(b[i][i]>=b[i][j]) g[i][j]=1;
         }
     }
-    for(int i=1;i<=n;i++) cout<<ans[i]<<"\n";
+    for(int k=1;k<=n;k++){
+        for(int j=1;j<=n;j++){
+            for(int i=1;i<=n;i++) g[i][j]|=(g[i][k]&&g[k][j]);
+        }
+    }
+    for(int i=1;i<=n;i++){
+        ll maxn=b[i][i],idx=i;
+        for(int j=1;j<=n;j++){
+            if(i==j) continue;
+            else if(g[i][j]&&g[j][i]){
+                if(maxn>b[i][j]) maxn=b[i][j],idx=j;
+            }
+        }
+        cout<<idx<<"\n";
+    }
     return 0;
 }
