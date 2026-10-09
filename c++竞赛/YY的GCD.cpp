@@ -1,0 +1,62 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N=1e7+10;
+ll cnt,mu[N],vis[N],pri[N],f[N],sum[N];
+void init()
+{
+    mu[1]=1;
+    for(int i=2;i<N;i++){
+        if(vis[i]==0){
+            mu[i]=-1;
+            vis[i]=1;
+            pri[++cnt]=i;
+        }
+        for(int j=1;j<=cnt;j++){
+            if(i*pri[j]>=N){
+                break;
+            }
+            vis[i*pri[j]]=1;
+            if(i%pri[j]==0){
+                mu[i*pri[j]]=0;
+                break;
+            }
+            mu[i*pri[j]]=mu[i]*mu[pri[j]];
+        }
+    }
+    for(int i=1;i<=cnt;i++){
+    	for(int j=1;j*pri[i]<N;j++){
+    		f[pri[i]*j]+=mu[j];
+		}
+	}
+    sum[0]=0;
+    sum[1]=f[1];
+    for(int i=2;i<N;i++){
+    	sum[i]=sum[i-1]+f[i];
+	}
+}
+ll kkk(ll a,ll b){
+	ll ans=0,r=0;
+	if(a<b) swap(a,b);
+	for(ll l=1;l<=b;l=r+1){
+		r=min(a/(a/l),b/(b/l));
+		ans+=(sum[r]-sum[l-1])*(long long)(a/l)*(b/l);
+	}
+	return ans;
+}
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	init();
+	int t;
+	cin>>t;
+	while(t--){
+		ll a,b;
+		cin>>a>>b;
+		cout<<kkk(a,b)<<'\n';
+	}
+	return 0;
+}
+

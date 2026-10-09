@@ -56,7 +56,7 @@ int main(){
     for(int i=1;i<=n;i++) sum[i]=sum[i-1]+a[i];
     ll l=1,r=1e10,ans=0;
     while(l<=r){
-        ll mid=(l+r)>>1;
+        int mid=(l+r)>>1;
         if(check(mid)) l=mid+1,ans=mid;
         else r=mid-1;
     }

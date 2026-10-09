@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N=1e5+10;
+int a[N];
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	freopen("好数.in","r",stdin);
+	int x,len=0;
+	while(len<1000000){
+		cin>>x;
+		a[++len]=x;
+	}
+	freopen("好数2.in","r",stdin);
+	
+	int i=0;
+	while(i<1000000){
+		cin>>x;
+		if(a[++i]!=x){
+			cout<<"fail";
+			return 0;
+		}
+	}
+	cout<<"success";
+	return 0;
+}
+
