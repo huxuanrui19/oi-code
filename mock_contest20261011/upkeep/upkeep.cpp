@@ -57,8 +57,8 @@ ll kru(int s){
 }   //MST
 
 int main(){
-    //freopen("upkeep.in","r",stdin);
-    //freopen("upkeep.out","w",s1tdout);
+    freopen("upkeep.in","r",stdin);
+    freopen("upkeep.out","w",stdout);
     ios::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
     cin>>n>>m;
@@ -67,6 +67,7 @@ int main(){
         cin>>e[i].u>>e[i].v>>e[i].l>>e[i].c;
         if(e[i].l!=0) mark=0;
         g[e[i].u].push_back({e[i].v,e[i].l,e[i].c});
+        g[e[i].v].push_back({e[i].u,e[i].l,e[i].c});
     }
     for(int i=1;i<=n;i++) fa[i]=i;
     if(mark==1){
@@ -75,9 +76,16 @@ int main(){
         }
     }
     else{
+        map<int,pair<ll,ll> > mp[N];
         for(int i=1;i<=m;i++){
-            ans+=e[i].c;
+            int u=e[i].u,v=e[i].v;
+            if(mp[min(u,v)].count(max(u,v))==0) mp[min(u,v)][max(u,v)]=e[i].c;
+            mp[min(u,v)][max(u,v)]=min(mp[min(u,v)][max(u,v)],e[i].c);
         }
+        for(int i=1;i<=n;i++){
+            for(auto d:mp[i]) ans+=d.second;
+        }
+        cout<<ans;
     }
     cout<<ans;
     return 0;
