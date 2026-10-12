@@ -76,7 +76,7 @@ int main(){
         }
     }
     else{
-        map<int,pair<ll,ll> > mp[N];
+        map<int,ll> mp[N];
         for(int i=1;i<=m;i++){
             int u=e[i].u,v=e[i].v;
             if(mp[min(u,v)].count(max(u,v))==0) mp[min(u,v)][max(u,v)]=e[i].c;
