@@ -3,6 +3,15 @@ Todo:
   ✔ learn cdq分治 @done(26-10-16 21:09)
   ☐ review cdq分治
   ☐ learn cat-tree
-  ☐ study CSP-S 2025 T3 @started(26-10-17 11:58)
+  ☐ study CSP-S 2025 T3{
+    ✔ finish 50 pts @started(26-10-17 11:58) @done(26-10-21 17:26) @lasted(4d5h28m11s)
+    ☐ finish 100 pts
+  } @started(26-10-17 11:58)
   ☐ finish P11190
-  ☐ finish SCP-ST2 P17723
+  ✔ finish SCP-ST2 P17723 @started(26-10-18 20:11) @done(26-10-18 20:48) @lasted(37m38s)
+  ☐ learn SAM
+  ☐ learn AC自动机 {
+    ☐ learn P3808 @started(26-10-21 17:24)
+    ☐ learn P3796
+    ☐ learn P5357
+  } @started(26-10-21 17:24)

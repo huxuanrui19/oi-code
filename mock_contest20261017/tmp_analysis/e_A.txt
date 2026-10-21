@@ -1,0 +1,20 @@
+A_std.cpp: In function 'i64 calc(i64, i64)':
+A_std.cpp:45:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   45 |         F(i,l,r)tmp.push_back(a[i]);
+      |           ^
+A_std.cpp:19:34: note: in definition of macro 'F'
+   19 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
+A_std.cpp: In function 'int main()':
+A_std.cpp:56:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   56 |         F(i,1,n)a[i]=read();
+      |           ^
+A_std.cpp:19:34: note: in definition of macro 'F'
+   19 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
+A_std.cpp:81:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   81 |         F(i,1,n)if((i&1)&&pre[i]==suf[i+1])
+      |           ^
+A_std.cpp:19:34: note: in definition of macro 'F'
+   19 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^

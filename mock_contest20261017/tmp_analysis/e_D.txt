@@ -1,0 +1,50 @@
+D_std.cpp: In function 'i64 Min(i64, i64)':
+D_std.cpp:64:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   64 |         D(i,18,0)if(f[x][i]&&f[y][i]&&hsh[x][i]==hsh[y][i])
+      |           ^
+D_std.cpp:25:34: note: in definition of macro 'D'
+   25 | #define D(i,j,n)for(register int i=j;i>=n;i--)
+      |                                  ^
+D_std.cpp: In function 'int main()':
+D_std.cpp:72:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   72 |         F(i,0,k-1)F(j,0,k-1)scanf("%1lld",&mat[i][j]);
+      |           ^
+D_std.cpp:27:34: note: in definition of macro 'F'
+   27 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
+D_std.cpp:72:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   72 |         F(i,0,k-1)F(j,0,k-1)scanf("%1lld",&mat[i][j]);
+      |                     ^
+D_std.cpp:27:34: note: in definition of macro 'F'
+   27 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
+D_std.cpp:73:27: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   73 |         scanf("%s",s+1);F(i,1,n)s[i]-='a';
+      |                           ^
+D_std.cpp:27:34: note: in definition of macro 'F'
+   27 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
+D_std.cpp:74:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   74 |         pw[0]=B;F(i,1,18)pw[i]=__int128(pw[i-1])*pw[i-1]%M;
+      |                   ^
+D_std.cpp:27:34: note: in definition of macro 'F'
+   27 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
+D_std.cpp:76:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   76 |         D(i,n,1){
+      |           ^
+D_std.cpp:25:34: note: in definition of macro 'D'
+   25 | #define D(i,j,n)for(register int i=j;i>=n;i--)
+      |                                  ^
+D_std.cpp:82:11: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   82 |         D(i,n,1){
+      |           ^
+D_std.cpp:25:34: note: in definition of macro 'D'
+   25 | #define D(i,j,n)for(register int i=j;i>=n;i--)
+      |                                  ^
+D_std.cpp:90:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   90 |                 F(j,1,18){
+      |                   ^
+D_std.cpp:27:34: note: in definition of macro 'F'
+   27 | #define F(i,j,n)for(register int i=j;i<=n;i++)
+      |                                  ^
