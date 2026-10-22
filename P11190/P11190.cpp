@@ -35,26 +35,62 @@ int main(){
 					cout<<"\n";
 				}
 				else{
-					cout<<res<<"\n";
-					vector<pii> v;
-					queue<int>q;
-					for(int i=1;i<=n;i++) if(s[i]==ch) q.push(i);
-					q.push(q.front());q.pop();
-					ll cnt=0;
+					int cnt=2;vector<int> ans[n];
+					int l=0,r=0;
 					for(int i=1;i<=n;i++){
-						if(s[i]==ch&cnt) v.push_back({cnt,i-cnt});
-						else cnt++;
+						if(s[i]!=ch){
+							l=i;break;
+						}
 					}
-					if(cnt) v.push_back({cnt,n+1-cnt});
+					for(int i=n;i>=1;i--){
+						if(s[i]!=ch){
+							r=i;break;
+						}
+					}
+					ans[1].push_back(l);
+					ans[2].push_back(r);
+					for(int i=l+1;i<=n;i++){
+						if(s[i]==ch) ans[1].push_back(i);
+					}
+					for(int i=1;i<l;i++){
+						if(s[i]==ch) ans[2].push_back(i);
+					}
+					for(int i=l+1;i<r;i++){
+						if(s[i]!=ch) ans[++cnt].push_back(i);
+					}
+					for(int i=1;i<=cnt;i++){
+						if(ans[i].size()<2){
+							if(ans[1].size()>2) ans[i].push_back(ans[1].back()),ans[1].pop_back();
+							else ans[i].push_back(ans[2].back()),ans[2].pop_back();
+						}
+					}
+					for(int i=1;i<=cnt;i++) sort(ans[i].begin(),ans[i].end());
+					cout<<cnt<<"\n";
+					for(int i=1;i<=cnt;i++){
+						cout<<ans[i].size()<<" ";
+						for(auto d:ans[i]) cout<<d<<" ";
+						cout<<"\n";
+					}
 				}
 			}
 			else{
 				vector<pii> v;
-				for(int i=1;i<=n;i++) v.push_back({s[i-1],i});
+				for(int i=1;i<=n;i++) v.push_back({s[i],i});
 				sort(v.begin(),v.end());
-				cout<<n/2<<"\n";
-				for(int i=1,j=1;i<=n/2;i++){
-					//
+				cout<<(n/2)<<"\n";
+				vector<int> ans[n];
+				for(int i=1;i<=n/2;i++){
+					ans[i].push_back(v[i-1].second);ans[i].push_back(v[i+n/2-1].second);
+					if(ans[i][0]>ans[i][1]) swap(ans[i][0],ans[i][1]);
+				}
+				if(n%2==1){
+					ans[1].push_back(v[n-1].second);
+                    sort(ans[1].begin(),ans[1].end());
+				}
+				for(int i=1;i<=n/2;i++){
+					cout<<ans[i].size()<<" ";
+					for(auto d:ans[i]) cout<<d<<" ";
+					cout<<"\n";
 				}
 			}
 		}
