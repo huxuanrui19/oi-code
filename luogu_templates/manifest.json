@@ -1,0 +1,472 @@
+{
+  "verified_on": "2026-10-24",
+  "criterion": "Luogu current title starts with 【模板】; match local identity by ID, filename, and source behavior.",
+  "source_files_scanned": 815,
+  "problem_count": 44,
+  "source_files_moved": 57,
+  "supporting_notes_moved": 1,
+  "moves": [
+    {
+      "problem_id": "B3647",
+      "old_path": "c++竞赛/【模板】Floyd.cpp",
+      "new_path": "luogu_templates/B3647/【模板】Floyd.cpp",
+      "sha256": "ed1d67f8c50fda8cf00812ec63e682dd70b6b6de0c41a223f0f733180e156a57",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P1177",
+      "old_path": "c++竞赛/排序.cpp",
+      "new_path": "luogu_templates/P1177/排序.cpp",
+      "sha256": "da557e814d6ab2af8a0ebe0e2a170750b7f56b924a15b7054b989c6ee9862487",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P1177",
+      "old_path": "c++竞赛/排序_1.cpp",
+      "new_path": "luogu_templates/P1177/排序_1.cpp",
+      "sha256": "f3a98695c05dd8e8708ab86f36a561efdef58ae3ec2b63690363deac654d90d7",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P13270",
+      "old_path": "P13270/P13270.cpp",
+      "new_path": "luogu_templates/P13270/P13270.cpp",
+      "sha256": "97417d7abcda4f6777beb5d4de12aa76dfa8624843faa6984e3b3e479bafa143",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P1495",
+      "old_path": "c++竞赛/【模板】中国剩余定理（CRT） 曹冲养猪(new).cpp",
+      "new_path": "luogu_templates/P1495/【模板】中国剩余定理（CRT） 曹冲养猪(new).cpp",
+      "sha256": "5fd3b91d1921439cb1351608e9191abeb645e22ab642a1dc70a4b76b78da0166",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P1495",
+      "old_path": "c++竞赛/【模板】中国剩余定理（CRT） 曹冲养猪.cpp",
+      "new_path": "luogu_templates/P1495/【模板】中国剩余定理（CRT） 曹冲养猪.cpp",
+      "sha256": "a29eaadc8315acc1391222f196d8f2a5a2efc723196623cb7cffaeac47bfda75",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P2197",
+      "old_path": "c++竞赛/Nim 游戏.cpp",
+      "new_path": "luogu_templates/P2197/Nim 游戏.cpp",
+      "sha256": "cbf1ce98fb2d62181c9713b89ce4c52a3623020ed84859529a5fedc9a9ff35ca",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P2252",
+      "old_path": "c++竞赛/取石子游戏【模板】威佐夫博弈.cpp",
+      "new_path": "luogu_templates/P2252/取石子游戏【模板】威佐夫博弈.cpp",
+      "sha256": "69e1e4fa94e6b689768a6c6f7ef8306533be20f213453baeda15b3b896454bad",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P2613",
+      "old_path": "c++竞赛/有理数取余.cpp",
+      "new_path": "luogu_templates/P2613/有理数取余.cpp",
+      "sha256": "f0b4dbbbedf93bae9c802f611b5ebbb5dd270e4ce9839c1f05b70cb2cabb9a26",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3366",
+      "old_path": "c++竞赛/【模板】最小生成树.cpp",
+      "new_path": "luogu_templates/P3366/【模板】最小生成树.cpp",
+      "sha256": "aa5c9de0de729d0bd86d9df68fb95069ec1ca33741f03ad46cf8433a2b1eb71c",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3367",
+      "old_path": "c++竞赛/【模板】并查集.cpp",
+      "new_path": "luogu_templates/P3367/【模板】并查集.cpp",
+      "sha256": "89f3fdc06bd3f12936a03856c61bef5694167883989b9b50d49d0ffe8bf38336",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3368",
+      "old_path": "c++竞赛/【模板】树状数组 2.cpp",
+      "new_path": "luogu_templates/P3368/【模板】树状数组 2.cpp",
+      "sha256": "e5d831337a2d541f2e7c8df3f60dc1b78c8831a73beeae7a76ef9ca297afde3e",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3369",
+      "old_path": "c++竞赛/【模板】普通平衡树(rotate treap实现).cpp",
+      "new_path": "luogu_templates/P3369/【模板】普通平衡树(rotate treap实现).cpp",
+      "sha256": "c3c816705b098e3147238ba81a04db6c210a6905204fcc2dccdc9be998e5fa93",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3369",
+      "old_path": "c++竞赛/【模板】普通平衡树(替罪羊树实现).cpp",
+      "new_path": "luogu_templates/P3369/【模板】普通平衡树(替罪羊树实现).cpp",
+      "sha256": "b0cb7f7cd272b4a9c9c8a7cca9db26b79be74cd2b0a44a195b260fe712b6b4d6",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3369",
+      "old_path": "c++竞赛/【模板】普通平衡树(STL实现).cpp",
+      "new_path": "luogu_templates/P3369/【模板】普通平衡树(STL实现).cpp",
+      "sha256": "6c8945702535ee379930ab9fa9df3eb2c361154abcc5f0680bbcf817af0752a1",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3370",
+      "old_path": "c++竞赛/【模板】字符串哈希.cpp",
+      "new_path": "luogu_templates/P3370/【模板】字符串哈希.cpp",
+      "sha256": "c3f413a011b622c8cb08d928399d3417341d683f67fc5f206eea898926dc392d",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3371",
+      "old_path": "c++竞赛/【模板】单源最短路径（弱化版）.cpp",
+      "new_path": "luogu_templates/P3371/【模板】单源最短路径（弱化版）.cpp",
+      "sha256": "480ecf589636baf01cd27ba4a746e48715899017094f74f9169e0252173d266d",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3372",
+      "old_path": "c++竞赛/【模板】线段树 1.cpp",
+      "new_path": "luogu_templates/P3372/【模板】线段树 1.cpp",
+      "sha256": "95c94b19917975bd57ec4b3c35b81c32f39679c3c922f38484ba9b9708fea94c",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3372",
+      "old_path": "c++竞赛/【模板】线段树 1(纯正线段树版本).cpp",
+      "new_path": "luogu_templates/P3372/【模板】线段树 1(纯正线段树版本).cpp",
+      "sha256": "f950c134d7509c35a028da4081471b32714b1f61d2cdb0ffdd4723d0b722cf3a",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3372",
+      "old_path": "segment_tree/segment_tree.cpp",
+      "new_path": "luogu_templates/P3372/segment_tree.cpp",
+      "sha256": "afa00cf3ce0d95f4747c7922b2c357c96f656eb8a83d6a118cba2b3f721efc37",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3373",
+      "old_path": "c++竞赛/【模板】线段树 2.cpp",
+      "new_path": "luogu_templates/P3373/【模板】线段树 2.cpp",
+      "sha256": "f5a25fb64a08a0fae43f7178e244db4af06711078cc2adde9163d5c1fe8009a4",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3374",
+      "old_path": "c++竞赛/【模板】树状数组 1.cpp",
+      "new_path": "luogu_templates/P3374/【模板】树状数组 1.cpp",
+      "sha256": "92ad9e194312dac2a9d68fa323e81f9fe364541762d1e629184d114b2e9d6dfd",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3375",
+      "old_path": "P3375/P3375.cpp",
+      "new_path": "luogu_templates/P3375/P3375.cpp",
+      "sha256": "06073c6987c92a71495bc8156a4e737983d8f2720499bda66ded34d0f6b23991",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3375",
+      "old_path": "c++竞赛/【模板】KMP.cpp",
+      "new_path": "luogu_templates/P3375/【模板】KMP.cpp",
+      "sha256": "05d6b13d3f14c4aa3608c31bbf2526d2ba1d6179dcc09f48eb70157f650ce7d5",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3378",
+      "old_path": "c++竞赛/堆.cpp",
+      "new_path": "luogu_templates/P3378/堆.cpp",
+      "sha256": "5204ff8b3fb739467677e0e8956979dcc7c0484737c5b134cb5fe2aee7518e27",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3379",
+      "old_path": "c++竞赛/【模板】最近公共祖先（LCA）(树链剖分).cpp",
+      "new_path": "luogu_templates/P3379/【模板】最近公共祖先（LCA）(树链剖分).cpp",
+      "sha256": "c5d8e0a2bb0357b4e21efe493e9671076fbf1354667e7b3b0f95549737c24f9b",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3383",
+      "old_path": "c++竞赛/【模板】线性筛素数.cpp",
+      "new_path": "luogu_templates/P3383/【模板】线性筛素数.cpp",
+      "sha256": "b31a138bf9f1c00d74bb64e19f4cbb200132383af5ae8a088dc276a7c0f872da",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3384",
+      "old_path": "c++竞赛/【模板】重链剖分&树链剖分.cpp",
+      "new_path": "luogu_templates/P3384/【模板】重链剖分&树链剖分.cpp",
+      "sha256": "ebc89e038124401beca79b482bce872f6a9e144973e431a7f7cac73abd655e96",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3385",
+      "old_path": "c++竞赛/【模板】负环.cpp",
+      "new_path": "luogu_templates/P3385/【模板】负环.cpp",
+      "sha256": "d1e54ea74836e46d1d52e6151434140171852777df9036ff26ff4a0fcfc4e104",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3386",
+      "old_path": "c++竞赛/【模板】二分图最大匹配.cpp",
+      "new_path": "luogu_templates/P3386/【模板】二分图最大匹配.cpp",
+      "sha256": "eefff8c1891ecaddccfb4a741534e4d2a55894e0bdf46fb4cb660024fa2e6aa2",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3387",
+      "old_path": "P3387/P3387.cpp",
+      "new_path": "luogu_templates/P3387/P3387.cpp",
+      "sha256": "ea4b861bb34a7263d444d069dd2e0f33ee65ef2e185992b5783fd903a9fddc3e",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3387",
+      "old_path": "c++竞赛/【模板】缩点.cpp",
+      "new_path": "luogu_templates/P3387/【模板】缩点.cpp",
+      "sha256": "9b0d84a0168de1bc24221b8a8113909f6f6f71f03d4dbc3ae07ae7c512f94a6b",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3388",
+      "old_path": "P3388/P3388.cpp",
+      "new_path": "luogu_templates/P3388/P3388.cpp",
+      "sha256": "e7d1a571e4078fea3f67ec54e498ce0eba918b60e3b1c44176e70b528d695107",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3388",
+      "old_path": "c++竞赛/【模板】割点（割顶）.cpp",
+      "new_path": "luogu_templates/P3388/【模板】割点（割顶）.cpp",
+      "sha256": "5449b43b720d813b95694ec70780fe90321c15783dca62e065b001191cac7762",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3390",
+      "old_path": "c++竞赛/【模板】矩阵快速幂.cpp",
+      "new_path": "luogu_templates/P3390/【模板】矩阵快速幂.cpp",
+      "sha256": "87cb4e425fa1ae47b3b02e8627cbd5d91ff90e19849f77af2b4da9441f448363",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3807",
+      "old_path": "c++竞赛/卢卡斯定理.cpp",
+      "new_path": "luogu_templates/P3807/卢卡斯定理.cpp",
+      "sha256": "0e5c0df5cd07765dc8e7e005c4eacf20f53a01a54a60994126ab047005c276d6",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3807",
+      "old_path": "c++竞赛/卢卡斯定理 Lucas 定理.cpp",
+      "new_path": "luogu_templates/P3807/卢卡斯定理 Lucas 定理.cpp",
+      "sha256": "05b9f030d630a7471e487e1988e1c041917ff888782ebb5d7f36eaa2cbe86f4e",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3810",
+      "old_path": "P3810/P3810.cpp",
+      "new_path": "luogu_templates/P3810/P3810.cpp",
+      "sha256": "7fce4bd934bead66afea75c966a2e04e237c6ccf820f310f8bc41fc747db7823",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3846",
+      "old_path": "c++竞赛/【模板】BSGS  [TJOI2007] 可爱的质数.cpp",
+      "new_path": "luogu_templates/P3846/【模板】BSGS  [TJOI2007] 可爱的质数.cpp",
+      "sha256": "89a55b002f0984e56525f6dfcd274192579c46feef2f2c1f8fb004b8b83282c2",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P3865",
+      "old_path": "c++竞赛/ST 表 && RMQ 问题.cpp",
+      "new_path": "luogu_templates/P3865/ST 表 && RMQ 问题.cpp",
+      "sha256": "2d52fb7950d4d79e04c359146f80ca8e349b0363567af1d5eb12ca873de7a884",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P4213",
+      "old_path": "c++竞赛/杜教筛.cpp",
+      "new_path": "luogu_templates/P4213/杜教筛.cpp",
+      "sha256": "b033b4b629e333dcba1acb67cc630e927c95a53eaaff8d0eeb3beb4da1f020c9",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P4549",
+      "old_path": "P4549/P4549.cpp",
+      "new_path": "luogu_templates/P4549/P4549.cpp",
+      "sha256": "00fd11a39773422f4ec3b5c52b64a2690a7d095d9f67fdda760a6d1bc30ffd33",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P4720",
+      "old_path": "c++竞赛/【模板】扩展卢卡斯定理  exLucas.cpp",
+      "new_path": "luogu_templates/P4720/【模板】扩展卢卡斯定理  exLucas.cpp",
+      "sha256": "940dbdc2d6ec46c59d8b2189f3d32f422d5d9376b044a5064040500d2cdac62b",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P4777",
+      "old_path": "c++竞赛/【模板】扩展中国剩余定理（EXCRT）TJ版.cpp",
+      "new_path": "luogu_templates/P4777/【模板】扩展中国剩余定理（EXCRT）TJ版.cpp",
+      "sha256": "48cd75640c975232525603ce9969bf814d959bad39a0ed6a188b98fc0973f84f",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P4777",
+      "old_path": "c++竞赛/【模板】扩展中国剩余定理（EXCRT）.cpp",
+      "new_path": "luogu_templates/P4777/【模板】扩展中国剩余定理（EXCRT）.cpp",
+      "sha256": "2f636d150f041052b610fb9660a99c223ee2984d1b7a3c05ae02cb8428f7fb3d",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P4779",
+      "old_path": "c++竞赛/【模板】单源最短路径（标准版）.cpp",
+      "new_path": "luogu_templates/P4779/【模板】单源最短路径（标准版）.cpp",
+      "sha256": "66850286cefdc9c1095bd68a83d1ee081b555a7af43e0fae57aa89903b941cd4",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P5091",
+      "old_path": "c++竞赛/【模板】扩展欧拉定理.cpp",
+      "new_path": "luogu_templates/P5091/【模板】扩展欧拉定理.cpp",
+      "sha256": "417f99ffe2fefacf45decc26f6a343f7af68afed628cd3175d698c78b044c8b5",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P5431",
+      "old_path": "c++竞赛/【模板】模意义下的乘法逆元 2.cpp",
+      "new_path": "luogu_templates/P5431/【模板】模意义下的乘法逆元 2.cpp",
+      "sha256": "5d86a0034bb6fc320ed7edf909d039106bff7f1dd1396bbcc41c1d07519b1b3b",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P5490",
+      "old_path": "c++竞赛/【模板】扫描线 & 矩形面积并.cpp",
+      "new_path": "luogu_templates/P5490/【模板】扫描线 & 矩形面积并.cpp",
+      "sha256": "32e255a1c49ad4f7d985758bdbbf056351d915193b4295985f4722dc4dd6a6b4",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P5495",
+      "old_path": "c++竞赛/【模板】Dirichlet 前缀和.cpp",
+      "new_path": "luogu_templates/P5495/【模板】Dirichlet 前缀和.cpp",
+      "sha256": "36544c5110ec047db865bbddc27b419ffab5603fd47b3faf59506eed99211c22",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P5656",
+      "old_path": "c++竞赛/【模板】二元一次不定方程 (exgcd).cpp",
+      "new_path": "luogu_templates/P5656/【模板】二元一次不定方程 (exgcd).cpp",
+      "sha256": "cb8eb66967d0c8c6b9639f446d9eb6a003cb5739c1ac2f3d7389a46849c9a522",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P7771",
+      "old_path": "c++竞赛/【模板】欧拉路径.cpp",
+      "new_path": "luogu_templates/P7771/【模板】欧拉路径.cpp",
+      "sha256": "cdc36055d79e486460a613d86408c6c08769398144da5403e80db02f6eab6974",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P8306",
+      "old_path": "P8306/P8306.cpp",
+      "new_path": "luogu_templates/P8306/P8306.cpp",
+      "sha256": "15ffc3b7615905972159389f42776090b6c2eecf8c226fa3a39802e7a985150d",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P8306",
+      "old_path": "c++竞赛/【模板】字典树.cpp",
+      "new_path": "luogu_templates/P8306/【模板】字典树.cpp",
+      "sha256": "19905d2f185a3e12779d3025fd5f1a80ebc602409b6b139066feb15923126be8",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P8306",
+      "old_path": "P8306/Trie.md",
+      "new_path": "luogu_templates/P8306/Trie.md",
+      "sha256": "67c530f6f72fd6465958ba7d2062862a9133f2a3cc7b0022ddd9f5434067b358",
+      "kind": "supporting_note"
+    },
+    {
+      "problem_id": "P8435",
+      "old_path": "c++竞赛/【模板】点双连通分量.cpp",
+      "new_path": "luogu_templates/P8435/【模板】点双连通分量.cpp",
+      "sha256": "5645b95860986ee46327d641c3833560b100ee1688001346e3f63689826707aa",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P8436",
+      "old_path": "c++竞赛/【模板】边双连通分量-1.cpp",
+      "new_path": "luogu_templates/P8436/【模板】边双连通分量-1.cpp",
+      "sha256": "8c35f54ed936b59839941388abb764a214d0d6c0d26f0511ec4d2c9b4fc0e25d",
+      "kind": "source"
+    },
+    {
+      "problem_id": "P8436",
+      "old_path": "c++竞赛/【模板】边双连通分量.cpp",
+      "new_path": "luogu_templates/P8436/【模板】边双连通分量.cpp",
+      "sha256": "a9e56b96fe8ba62a185a40462577ffea8c5e776731b8aeabc1290e0942a249bc",
+      "kind": "source"
+    }
+  ],
+  "excluded_examples": [
+    {
+      "path": "P1368/P1368.cpp",
+      "reason": "当前标题为「工艺」，不以【模板】开头；新模板题是 P13270。",
+      "url": "https://www.luogu.com.cn/problem/P1368"
+    },
+    {
+      "path": "P3808/P3808.cpp",
+      "reason": "当前标题为「AC 自动机（简单版）」，不以【模板】开头。",
+      "url": "https://www.luogu.com.cn/problem/P3808"
+    },
+    {
+      "path": "B3609/B3609.cpp",
+      "reason": "当前标题为「[图论与代数结构 701] 强连通分量」，不以【模板】开头。",
+      "url": "https://www.luogu.com.cn/problem/B3609"
+    },
+    {
+      "path": "c++竞赛/Pollard-Rho.cpp",
+      "reason": "虽然文件名相同，但实际代码读入 x,c,k，迭代 (x*x+c)%10000，不是 P4718 的质因数分解输入输出。"
+    },
+    {
+      "path": "c++竞赛/中位数 [权值线段树模板].cpp",
+      "reason": "本地“模板”字样不能证明洛谷题目标题以【模板】开头；未归入官方模板题。"
+    },
+    {
+      "path": "c++竞赛/割边（桥）模板.cpp",
+      "reason": "本地“模板”字样不能证明洛谷题目标题以【模板】开头；未归入官方模板题。"
+    }
+  ],
+  "unverified": [
+    {
+      "problem_id": "T520384",
+      "reason": "Luogu returned status 401; current custom-problem title could not be verified."
+    },
+    {
+      "problem_id": "T521148",
+      "reason": "Luogu returned status 401; current custom-problem title could not be verified."
+    },
+    {
+      "problem_id": "T634638",
+      "reason": "Luogu returned status 401; current custom-problem title could not be verified."
+    },
+    {
+      "problem_id": "T778421",
+      "reason": "Luogu returned status 401; current custom-problem title could not be verified."
+    },
+    {
+      "problem_id": "T831481",
+      "reason": "Luogu returned status 401; current custom-problem title could not be verified."
+    },
+    {
+      "problem_id": "T832258",
+      "reason": "Luogu returned status 401; current custom-problem title could not be verified."
+    }
+  ],
+  "validation": "All moved files retain their SHA-256; algorithm correctness and online acceptance are not certified."
+}
