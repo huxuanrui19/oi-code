@@ -5,26 +5,22 @@ const int N=2e6+10;
 const ll mod=1.5e9+1,base=211;
 ll n,ans=0;
 string s;
-bool check(int l,int r){
-    stack<char> st;
-    for(int i=l;i<=r;i++){
+ll check(int l){
+    stack<char> st;int cnt=0;
+    for(int i=l;i<=n;i++){
         if(st.empty()) st.push(s[i]);
         else if(st.top()!=s[i]) st.push(s[i]);
         else if(st.top()==s[i]) st.pop();
-        if(st.size()>(r-i)) return 0;
+        if(st.size()==0) cnt++;
     }
-    if(st.empty()) return 1;
-    return 0;
+    return cnt;
 }
 int main(){
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin>>n>>s;
     s=' '+s;
     for(int i=1;i<=n;i++){
-        for(int j=i+1;j<=n;j++){
-            if((j-i+1)%2) continue;
-            if(check(i,j)) ans++;
-        }
+        ans+=check(i);
     }
     cout<<ans;
     return 0;
