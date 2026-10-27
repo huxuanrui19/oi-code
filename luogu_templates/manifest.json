@@ -1,9 +1,9 @@
 {
   "verified_on": "2026-10-24",
-  "criterion": "Luogu current title starts with 【模板】; match local identity by ID, filename, and source behavior.",
+  "criterion": "44 problems verified against Luogu title prefix on 2026-10-24, plus the four user-designated templates P1368, B3609, P1168 (specified median file), P1656 (specified bridge file). Other problems remain aside.",
   "source_files_scanned": 815,
-  "problem_count": 44,
-  "source_files_moved": 57,
+  "problem_count": 48,
+  "source_files_moved": 61,
   "supporting_notes_moved": 1,
   "moves": [
     {
@@ -411,35 +411,53 @@
       "new_path": "luogu_templates/P8436/【模板】边双连通分量.cpp",
       "sha256": "a9e56b96fe8ba62a185a40462577ffea8c5e776731b8aeabc1290e0942a249bc",
       "kind": "source"
+    },
+    {
+      "problem_id": "P1368",
+      "old_path": "P1368/P1368.cpp",
+      "new_path": "luogu_templates/P1368/P1368.cpp",
+      "sha256": "4e6f9fb22c17ba13c163d27038ed6c85823c16ea2696d723f124582504b02822",
+      "kind": "source",
+      "inclusion": "user_designated",
+      "moved_on": "2026-10-27"
+    },
+    {
+      "problem_id": "B3609",
+      "old_path": "B3609/B3609.cpp",
+      "new_path": "luogu_templates/B3609/B3609.cpp",
+      "sha256": "1c21410576ccd332cc1e014886aa7d5f4132407707dd9e01968e032bbc852539",
+      "kind": "source",
+      "inclusion": "user_designated",
+      "moved_on": "2026-10-27"
+    },
+    {
+      "problem_id": "P1168",
+      "old_path": "c++竞赛/中位数 [权值线段树模板].cpp",
+      "new_path": "luogu_templates/P1168/中位数 [权值线段树模板].cpp",
+      "sha256": "01a4a84027502add65f1093fff34365f7d8246fcf2a21b7744115e6e90fb8172",
+      "kind": "source",
+      "inclusion": "user_designated",
+      "moved_on": "2026-10-27"
+    },
+    {
+      "problem_id": "P1656",
+      "old_path": "c++竞赛/割边（桥）模板.cpp",
+      "new_path": "luogu_templates/P1656/割边（桥）模板.cpp",
+      "sha256": "7d732301e43f11be4e111f0040f7855c31ddba71d356484e647530ce74364bb5",
+      "kind": "source",
+      "inclusion": "user_designated",
+      "moved_on": "2026-10-27"
     }
   ],
   "excluded_examples": [
-    {
-      "path": "P1368/P1368.cpp",
-      "reason": "当前标题为「工艺」，不以【模板】开头；新模板题是 P13270。",
-      "url": "https://www.luogu.com.cn/problem/P1368"
-    },
     {
       "path": "P3808/P3808.cpp",
       "reason": "当前标题为「AC 自动机（简单版）」，不以【模板】开头。",
       "url": "https://www.luogu.com.cn/problem/P3808"
     },
     {
-      "path": "B3609/B3609.cpp",
-      "reason": "当前标题为「[图论与代数结构 701] 强连通分量」，不以【模板】开头。",
-      "url": "https://www.luogu.com.cn/problem/B3609"
-    },
-    {
       "path": "c++竞赛/Pollard-Rho.cpp",
       "reason": "虽然文件名相同，但实际代码读入 x,c,k，迭代 (x*x+c)%10000，不是 P4718 的质因数分解输入输出。"
-    },
-    {
-      "path": "c++竞赛/中位数 [权值线段树模板].cpp",
-      "reason": "本地“模板”字样不能证明洛谷题目标题以【模板】开头；未归入官方模板题。"
-    },
-    {
-      "path": "c++竞赛/割边（桥）模板.cpp",
-      "reason": "本地“模板”字样不能证明洛谷题目标题以【模板】开头；未归入官方模板题。"
     }
   ],
   "unverified": [
@@ -468,5 +486,83 @@
       "reason": "Luogu returned status 401; current custom-problem title could not be verified."
     }
   ],
-  "validation": "All moved files retain their SHA-256; algorithm correctness and online acceptance are not certified."
+  "validation": "Source bytes preserved. Notes explain algorithms and identify limitations of historical implementations; online acceptance is not certified.",
+  "updated_on": "2026-10-27",
+  "solution_note_count": 48,
+  "template_declarations": [
+    {
+      "problem_id": "P1368",
+      "current_title": "工艺",
+      "reason": "Explicitly designated as a template by the user, regardless of the Luogu title prefix.",
+      "declared_source": "P1368/P1368.cpp"
+    },
+    {
+      "problem_id": "B3609",
+      "current_title": "[图论与代数结构 701] 强连通分量",
+      "reason": "Explicitly designated as a template by the user, regardless of the Luogu title prefix.",
+      "declared_source": "B3609/B3609.cpp"
+    },
+    {
+      "problem_id": "P1168",
+      "current_title": "中位数",
+      "reason": "Explicitly designated as a template by the user, regardless of the Luogu title prefix.",
+      "declared_source": "c++竞赛/中位数 [权值线段树模板].cpp"
+    },
+    {
+      "problem_id": "P1656",
+      "current_title": "炸铁路",
+      "reason": "Explicitly designated as a template by the user, regardless of the Luogu title prefix.",
+      "declared_source": "c++竞赛/割边（桥）模板.cpp"
+    }
+  ],
+  "notes": {
+    "P3370": "OI/04 Strings/luogu P3370.md",
+    "P3375": "OI/04 Strings/luogu P3375.md",
+    "P8306": "OI/04 Strings/luogu P8306.md",
+    "P13270": "OI/04 Strings/luogu P13270.md",
+    "P1368": "OI/04 Strings/luogu P1368.md",
+    "P1168": "OI/02 Data Structures/luogu P1168.md",
+    "P3367": "OI/02 Data Structures/luogu P3367.md",
+    "P3368": "OI/02 Data Structures/luogu P3368.md",
+    "P3374": "OI/02 Data Structures/luogu P3374.md",
+    "P3372": "OI/02 Data Structures/luogu P3372.md",
+    "P3373": "OI/02 Data Structures/luogu P3373.md",
+    "P3369": "OI/02 Data Structures/luogu P3369.md",
+    "P3378": "OI/02 Data Structures/luogu P3378.md",
+    "P3865": "OI/02 Data Structures/luogu P3865.md",
+    "P5490": "OI/02 Data Structures/luogu P5490.md",
+    "P1177": "OI/07 General Techniques/luogu P1177.md",
+    "P3810": "OI/07 General Techniques/luogu P3810.md",
+    "P1495": "OI/03 Mathematics/luogu P1495.md",
+    "P4777": "OI/03 Mathematics/luogu P4777.md",
+    "P5656": "OI/03 Mathematics/luogu P5656.md",
+    "P4549": "OI/03 Mathematics/luogu P4549.md",
+    "P2613": "OI/03 Mathematics/luogu P2613.md",
+    "P3383": "OI/03 Mathematics/luogu P3383.md",
+    "P3390": "OI/03 Mathematics/luogu P3390.md",
+    "P3807": "OI/03 Mathematics/luogu P3807.md",
+    "P4720": "OI/03 Mathematics/luogu P4720.md",
+    "P3846": "OI/03 Mathematics/luogu P3846.md",
+    "P5091": "OI/03 Mathematics/luogu P5091.md",
+    "P5431": "OI/03 Mathematics/luogu P5431.md",
+    "P5495": "OI/03 Mathematics/luogu P5495.md",
+    "P4213": "OI/03 Mathematics/luogu P4213.md",
+    "P2197": "OI/03 Mathematics/luogu P2197.md",
+    "P2252": "OI/03 Mathematics/luogu P2252.md",
+    "B3647": "OI/01 Graph Theory/luogu B3647.md",
+    "B3609": "OI/01 Graph Theory/luogu B3609.md",
+    "P1656": "OI/01 Graph Theory/luogu P1656.md",
+    "P3366": "OI/01 Graph Theory/luogu P3366.md",
+    "P3371": "OI/01 Graph Theory/luogu P3371.md",
+    "P4779": "OI/01 Graph Theory/luogu P4779.md",
+    "P3379": "OI/01 Graph Theory/luogu P3379.md",
+    "P3384": "OI/01 Graph Theory/luogu P3384.md",
+    "P3385": "OI/01 Graph Theory/luogu P3385.md",
+    "P3386": "OI/01 Graph Theory/luogu P3386.md",
+    "P3387": "OI/01 Graph Theory/luogu P3387.md",
+    "P3388": "OI/01 Graph Theory/luogu P3388.md",
+    "P7771": "OI/01 Graph Theory/luogu P7771.md",
+    "P8435": "OI/01 Graph Theory/luogu P8435.md",
+    "P8436": "OI/01 Graph Theory/luogu P8436.md"
+  }
 }
