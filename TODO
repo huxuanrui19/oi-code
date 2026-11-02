@@ -16,10 +16,10 @@ Todo:
     ☐ learn P5357
   } @started(26-10-21 17:24)
   ☐ finish CSP-S 2023{
-    ☐ finish T2{
-      ☐ 50pts and other brute @started(26-10-27 21:49)
-      ☐ 100 pts @started(26-10-27 21:49)
-      ☐ write the solution of T2
+    ☐ finish T2{ @started(26-10-30 21:00)
+      ✔ 50pts and other brute @started(26-10-27 21:49) @done(26-10-30 20:59) @lasted(2d23h10m55s)
+      ✔ 100 pts @started(26-10-27 21:49) @done(26-10-30 20:59) @lasted(2d23h10m58s)
+      ☐ write the solution of T2 
     }
     ☐ finish T3
     ☐ finish T4
