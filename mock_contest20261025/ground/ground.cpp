@@ -1,56 +1,57 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-const int N=500+10;
-const ll M=245,K=1e6+10,mod=998244353;
-ll n,k;
-ll a[N][N];int pos[K],dp[2][N][M],gd[K];
-vector<int> v;
-int main(){
-    //freopen("ground\\4.in","r",stdin);
-    //freopen("ground.out","w",stdout);
-    ios::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
-    cin>>n>>k;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            cin>>a[i][j];
-        }
-    }
-    for(int i=1;i<=k;i++){
-        if(k%i==0) v.push_back(i);
-    }
-    for(int i=0;i<(int)v.size();i++) pos[v[i]]=i;
-    for(ll i=0;i<=k;i++) gd[i]=__gcd(k,i);
 
-    if(a[1][1]==-1) dp[1][1][1]=0;
-    else dp[1][1][pos[__gcd(a[1][1],k)]]=1;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            if(i==1&&j==1) continue;
-            if(a[i][j]==-1) continue;
-            if(i>1){
-                for(ll t=0;t<(int)v.size();t++){
-                    ll num=v[t];
-                    num=gd[num*a[i][j]%k];
-                    dp[1][j][pos[num]]=(dp[1][j][pos[num]]+dp[0][j][t])%mod;
-                }
-            }
-            if(j>1){
-                for(ll t=0;t<(int)v.size();t++){
-                    ll num=v[t];
-                    num=gd[num*a[i][j]%k];
-                    dp[1][j][pos[num]]=(dp[1][j][pos[num]]+dp[1][j-1][t])%mod;
-                }
-            }
-        }
-        for(int j=1;j<=n;j++){
-            for(int t=0;t<(int)v.size();t++){
-                dp[0][j][t]=dp[1][j][t];
-                dp[1][j][t]=0;
-            }
-        }
+const int N = 505;
+const int D = 245;
+const int mod = 998244353;
+
+int dp[2][N][D];
+
+int main() {
+    freopen("ground.in", "r", stdin);
+    freopen("ground.out", "w", stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    cin >> n >> k;
+
+    vector<int> v;
+    for (int i = 1; i * i <= k; i++) {
+        if (k % i) continue;
+        v.push_back(i);
+        if (i * i != k) v.push_back(k / i);
     }
-    cout<<dp[0][n][pos[k]];
+    sort(v.begin(), v.end());
+
+    int m = v.size();
+    vector<int> id(k + 1);
+    for (int i = 0; i < m; i++) id[v[i]] = i;
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            int x;
+            cin >> x;
+            if (x == -1) continue;
+
+            for (int t = 0; t < m; t++) {
+                int ways = 0;
+                if (i == 1 && j == 1) ways = t == 0;
+                else {
+                    if (i > 1) ways = dp[0][j][t];
+                    if (j > 1) ways = (ways + dp[1][j - 1][t]) % mod;
+                }
+                if (!ways) continue;
+
+                int g = __gcd((long long)v[t] * x, (long long)k);
+                int &to = dp[1][j][id[g]];
+                to = (to + ways) % mod;
+            }
+        }
+        memcpy(dp[0], dp[1], sizeof(dp[0]));
+        memset(dp[1], 0, sizeof(dp[1]));
+    }
+
+    cout << dp[0][n][id[k]] << '\n';
     return 0;
 }
