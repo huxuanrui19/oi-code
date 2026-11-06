@@ -7,7 +7,7 @@ struct Point {
     long long x, y;
 };
 
-int n, p[N], q[N], cnt[N];
+int n, p[N], q[N], cnt[2 * N];
 long long bit[N];
 Point a[N];
 
@@ -69,5 +69,6 @@ int main() {
         }
     }
     cout << ans << '\n';
+    cout.flush();
     return 0;
 }

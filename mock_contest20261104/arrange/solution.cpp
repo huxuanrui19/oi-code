@@ -71,5 +71,6 @@ int main() {
         if (a[i] == low) ans = (ans + dp[i]) % mod;
     }
     cout << ans << '\n';
+    cout.flush();
     return 0;
 }

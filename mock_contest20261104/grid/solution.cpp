@@ -65,5 +65,6 @@ int main() {
         }
         cout << '\n';
     }
+    cout.flush();
     return 0;
 }

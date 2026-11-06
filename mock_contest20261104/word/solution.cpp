@@ -20,7 +20,8 @@ void add(const string &s, int pos, long long key) {
 
 void query(const string &s, int pos, long long key) {
     if (pos == m) {
-        ans += mp[key];
+        auto it = mp.find(key);
+        if (it != mp.end()) ans += it->second;
         return;
     }
     if (s[pos] == '?') {
@@ -45,5 +46,6 @@ int main() {
         add(s, 0, 0);
     }
     cout << ans << '\n';
+    cout.flush();
     return 0;
 }
