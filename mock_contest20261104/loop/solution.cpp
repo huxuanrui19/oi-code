@@ -22,8 +22,10 @@ long long sum(int x) {
 }
 
 int main() {
+#ifndef ONLINE_JUDGE
     freopen("loop.in", "r", stdin);
     freopen("loop.out", "w", stdout);
+#endif
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 

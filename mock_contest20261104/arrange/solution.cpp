@@ -29,7 +29,7 @@ int get_min(int x) {
 
 void add(int x, int v) {
     if (x <= 0) return;
-    for (; x <= n; x += x & -x) bit[x] = (bit[x] + v) % mod;
+    for (; x <= n + 1; x += x & -x) bit[x] = (bit[x] + v) % mod;
 }
 
 int sum(int x) {
@@ -39,8 +39,10 @@ int sum(int x) {
 }
 
 int main() {
+#ifndef ONLINE_JUDGE
     freopen("arrange.in", "r", stdin);
     freopen("arrange.out", "w", stdout);
+#endif
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
@@ -59,10 +61,10 @@ int main() {
     }
 
     vector<int> dp(n + 1);
-    add(1, 1);
     for (int i = 1; i <= n; i++) {
-        dp[i] = (sum(n) - sum(pre[i]) + mod) % mod;
-        add(nxt[i] - 1, dp[i]);
+        // A prefix may start here exactly when a[i] is a prefix minimum.
+        dp[i] = (sum(n + 1) - sum(pre[i]) + mod + (pre[i] == 0)) % mod;
+        add(nxt[i], dp[i]);
     }
 
     int ans = 0, low = n + 1;
