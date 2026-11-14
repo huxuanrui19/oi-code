@@ -17,7 +17,8 @@ int main(){
     }
     int cnt=0;
     for(int i=1;i<=k;i++) c[i][0]=c[i][1]=-1;
-    while(k--){
+    ll q=k;
+    while(q--){
         int opt,i,x;cin>>opt>>i;
         if(opt==1){
             cin>>x;
@@ -29,6 +30,16 @@ int main(){
             string s;cin>>s;
             if(s=="win"&&c[i][1]==-1) c[i][1]=cnt;
             else c[i][0]=cnt;
+        }
+    }
+    for(int i=1;i<=k;i++){
+        if(c[i][1]==-1&&c[i][0]==-1) continue;
+        else if(c[i][0]==-1){
+            
+        }
+        else if(c[i][0]>=c[i][1]){
+            cout<<"No\n";
+            return 0;
         }
     }
     cout<<"Yes\n";
