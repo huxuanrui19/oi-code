@@ -40,23 +40,27 @@ int main(){
 		return 0;
 	}
 	for(int i=0;i<=n;i++){
-		for(int j=0;j<=k;j++) dp[i][j]=tree[i][j]=-inf;
+		for(int j=0;j<=k;j++) dp[i][j]=-inf;
 	}
+	for(int j=0;j<=k;j++){
+		for(int i=1;i<=cnt;i++) tree[j][i]=-inf;
+	}		//initialization
 	dp[1][0]=1;update(0,mp[a[1]],1);
 	for(int i=2;i<=n;i++){
 		dp[i][1]=1;
 		if(a[i]>=a[i-1]) dp[i][0]=dp[i-1][0]+1;
-		for(int j=1;j<=k;j++){
+		for(int j=k;j>=1;j--){
 			if(a[i]>=a[i-1]) dp[i][j]=max(dp[i][j],dp[i-1][j]+1);
 			dp[i][j]=max(dp[i][j],query(j-1,mp[a[i]])+1);
 			update(j,mp[a[i]],dp[i][j]);
 		}
+		update(0,mp[a[i]],dp[i][0]);
 	}
 	ll ans=n;
 	for(int i=1;i<=n;i++){
 		for(int j=0;j<k;j++) ans=min(ans,n-dp[i][j]);
 	}
-    //ans=min(ans,n-dp[n][k]);
+    ans=min(ans,n-dp[n][k]);
 	cout<<ans;
 	return 0;
 }
