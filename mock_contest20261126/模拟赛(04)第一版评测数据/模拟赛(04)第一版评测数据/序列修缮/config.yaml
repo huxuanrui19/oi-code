@@ -1,0 +1,123 @@
+time: 1000ms
+memory: 1024m
+subtasks:
+  - id: 1
+    type: sum
+    score: 4
+    cases:
+      - input: 001.in
+        output: 001.ans
+        score: 2
+      - input: 002.in
+        output: 002.ans
+        score: 2
+  - id: 2
+    type: sum
+    score: 5
+    cases:
+      - input: 003.in
+        output: 003.ans
+        score: 3
+      - input: 004.in
+        output: 004.ans
+        score: 2
+  - id: 3
+    type: sum
+    score: 13
+    cases:
+      - input: 005.in
+        output: 005.ans
+        score: 7
+      - input: 006.in
+        output: 006.ans
+        score: 6
+  - id: 4
+    type: sum
+    score: 7
+    cases:
+      - input: 007.in
+        output: 007.ans
+        score: 4
+      - input: 008.in
+        output: 008.ans
+        score: 3
+  - id: 5
+    type: sum
+    score: 7
+    cases:
+      - input: 009.in
+        output: 009.ans
+        score: 4
+      - input: 010.in
+        output: 010.ans
+        score: 3
+  - id: 6
+    type: sum
+    score: 6
+    cases:
+      - input: 011.in
+        output: 011.ans
+        score: 3
+      - input: 012.in
+        output: 012.ans
+        score: 3
+  - id: 7
+    type: sum
+    score: 10
+    cases:
+      - input: 013.in
+        output: 013.ans
+        score: 5
+      - input: 014.in
+        output: 014.ans
+        score: 5
+  - id: 8
+    type: sum
+    score: 10
+    cases:
+      - input: 015.in
+        output: 015.ans
+        score: 5
+      - input: 016.in
+        output: 016.ans
+        score: 5
+  - id: 9
+    type: sum
+    score: 9
+    cases:
+      - input: 017.in
+        output: 017.ans
+        score: 5
+      - input: 018.in
+        output: 018.ans
+        score: 4
+  - id: 10
+    type: sum
+    score: 9
+    cases:
+      - input: 019.in
+        output: 019.ans
+        score: 5
+      - input: 020.in
+        output: 020.ans
+        score: 4
+  - id: 11
+    type: sum
+    score: 9
+    cases:
+      - input: 021.in
+        output: 021.ans
+        score: 5
+      - input: 022.in
+        output: 022.ans
+        score: 4
+  - id: 12
+    type: sum
+    score: 11
+    cases:
+      - input: 023.in
+        output: 023.ans
+        score: 6
+      - input: 024.in
+        output: 024.ans
+        score: 5
